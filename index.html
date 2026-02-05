@@ -2,93 +2,407 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Roxana Benicio - CV Profesional</title>
     <style>
-        /* ESTILOS PAGINA 2 - CATÁLOGO */
-        body { font-family: 'Calibri', 'Segoe UI', sans-serif; margin: 0; padding: 20px; color: #333; line-height: 1.4; background-color: #f5f5f5;}
-        .page-container { max-width: 800px; margin: 0 auto; background: white; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .page-title { text-align: center; font-size: 20px; color: #1a5f7a; font-weight: bold; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid #1a5f7a; }
-        .catalog-section { margin-bottom: 25px; page-break-inside: avoid; }
-        .catalog-title { font-size: 16px; font-weight: bold; color: #2c5aa0; background-color: #e9f2ff; padding: 8px 12px; border-radius: 5px; margin-bottom: 12px; }
-        .course-item { margin-bottom: 8px; padding-left: 10px; font-size: 13px; }
-        .course-name { display: block; font-weight: 500; }
-        .course-detail { font-size: 12px; color: #666; }
-        .two-col-list { column-count: 2; column-gap: 30px; }
-        @media print { body { background: white; padding: 10px; } .page-container { box-shadow: none; padding: 15px; } }
+        /* Estilos profesionales y modernos */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            color: #333; 
+            line-height: 1.5; 
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+        
+        /* Encabezado */
+        .header {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Secciones */
+        .section {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            color: #1e293b;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        /* Objetivo profesional */
+        .objective {
+            background-color: #f0f9ff;
+            padding: 18px;
+            border-radius: 6px;
+            border-left: 4px solid #2563eb;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+        
+        /* Experiencia y educación */
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 16px;
+        }
+        
+        .item-subtitle {
+            color: #475569;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .item-date {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            background: #f1f5f9;
+            padding: 3px 10px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+        
+        .item-description {
+            font-size: 14px;
+            color: #475569;
+        }
+        
+        /* Habilidades */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: #e2e8f0;
+            color: #334155;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .skill-tag.highlight {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+        
+        /* Cursos destacados */
+        .courses-highlight {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        
+        .course-item {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .course-name {
+            font-weight: 500;
+            color: #334155;
+        }
+        
+        .course-detail {
+            color: #64748b;
+            font-size: 13px;
+        }
+        
+        /* Footer */
+        .footer-note {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 13px;
+        }
+        
+        /* Para impresión */
+        @media print {
+            body { padding: 0; background: white; }
+            .cv-container { box-shadow: none; padding: 20px; }
+            .skill-tag { background: #f1f5f9 !important; }
+        }
     </style>
 </head>
 <body>
-    <div class="page-container">
-        <div class="page-title">📚 CATÁLOGO DE FORMACIÓN CONTINUA Y CERTIFICACIONES</div>
-        <p style="text-align: center; font-size: 13.5px; color: #555; margin-bottom: 25px;">Más de 40 cursos que evidencian una dedicación excepcional al aprendizaje permanente y una versatilidad única.</p>
-
-        <div class="catalog-section">
-            <div class="catalog-title">💻 DESARROLLO DE SOFTWARE & PROGRAMACIÓN (10+ Cursos)</div>
-            <div class="two-col-list">
-                <div class="course-item"><span class="course-name">React.js</span><span class="course-detail">Digital House (2026)</span></div>
-                <div class="course-item"><span class="course-name">Full Stack Java</span><span class="course-detail">Codo a Codo / GCBA (2022)</span></div>
-                <div class="course-item"><span class="course-name">Programación Web Full Stack</span><span class="course-detail">Digital House (2024)</span></div>
-                <div class="course-item"><span class="course-name">Programación desde Cero</span><span class="course-detail">Egg Live (2023)</span></div>
-                <div class="course-item"><span class="course-name">Python (Introducción)</span><span class="course-detail">Universidad Austral (2022)</span></div>
-                <div class="course-item"><span class="course-name">Sé Programar (JS, Ruby)</span><span class="course-detail">Argentina Programa (2022)</span></div>
-                <div class="course-item"><span class="course-name">Introducción al Desarrollo Web</span><span class="course-detail">Uni. de los Andes (2020, 2021)</span></div>
-                <div class="course-item"><span class="course-name">Programador</span><span class="course-detail">Escuela Prof. N°8 (2025)</span></div>
-                <div class="course-item"><span class="course-name">Operador de Informática</span><span class="course-detail">Escuela Prof. N°8 (2024)</span></div>
+    <div class="cv-container">
+        <!-- Encabezado -->
+        <div class="header">
+            <div class="name">ROXANA BENICIO</div>
+            <div class="title">Técnica en Infraestructura TI y Analista Programadora</div>
+            <div class="contact-info">
+                <div class="contact-item">📧 roxanayvbenicio@gmail.com</div>
+                <div class="contact-item">📱 388 473-2680</div>
+                <div class="contact-item">📍 San Salvador de Jujuy, Argentina</div>
             </div>
         </div>
-
-        <div class="catalog-section">
-            <div class="catalog-title">🔌 INFRAESTRUCTURA TI, REDES Y SISTEMAS (8+ Cursos)</div>
-            <div class="two-col-list">
-                <div class="course-item"><span class="course-name">Redes y Bases de Datos</span><span class="course-detail">Escuela de Minas (2020)</span></div>
-                <div class="course-item"><span class="course-name">Reparación y Mantenimiento de PC</span><span class="course-detail">Academia 3E (2025)</span></div>
-                <div class="course-item"><span class="course-name">Redes Informáticas</span><span class="course-detail">UNJu-Fa (2019)</span></div>
-                <div class="course-item"><span class="course-name">Redes y Reparación de PC</span><span class="course-detail">A. Quispe (2019)</span></div>
-                <div class="course-item"><span class="course-name">Operador de PC</span><span class="course-detail">Min. Desarrollo Humano (Jujuy)</span></div>
-                <div class="course-item"><span class="course-name">Tango Inicial (ERP)</span><span class="course-detail">Axoft (2024)</span></div>
-                <div class="course-item"><span class="course-name">Seminario de Informática</span><span class="course-detail">UCSE-DASS</span></div>
+        
+        <!-- Objetivo profesional -->
+        <div class="objective">
+            <strong>Perfil Profesional:</strong> Técnica especializada en Soporte de Infraestructura TI con formación en Análisis de Sistemas y Programación. Poseo una amplia experiencia en capacitación continua con más de 40 certificaciones en áreas técnicas. Mi objetivo es aplicar mis conocimientos en tecnología, automatización y gestión de sistemas en un entorno dinámico donde pueda seguir desarrollándome profesionalmente.
+        </div>
+        
+        <!-- Experiencia laboral -->
+        <div class="section">
+            <div class="section-title">EXPERIENCIA LABORAL</div>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Soporte Técnico / Prácticas / Freelance</div>
+                        <div class="item-subtitle">Servicios Técnicos Independientes</div>
+                    </div>
+                </div>
+                <div class="item-description">
+                    • Organización de archivos y documentos digitales.<br>
+                    • Atención y orientación a usuarios finales.<br>
+                    • Soporte técnico, mantenimiento de sistemas y gestión de datos.<br>
+                    • Automatización de tareas usando diversas herramientas informáticas.<br>
+                    • Asistencia en sistemas internos y administración básica de redes.
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Vendedora</div>
+                    </div>
+                </div>
+                <div class="item-description">
+                    • Atención directa al cliente y asesoramiento sobre productos.<br>
+                    • Manejo de caja y control de inventario.<br>
+                    • Organización del espacio de venta y exhibición de productos.<br>
+                    • Capacidad para cumplir objetivos y trabajar bajo presión.
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Cocinera / Apoyo en Servicios de Alimentación</div>
+                    </div>
+                </div>
+                <div class="item-description">
+                    • Preparación y distribución de alimentos.<br>
+                    • Cumplimiento de normas de higiene y seguridad alimentaria.<br>
+                    • Adaptación a dietas especiales y protocolos de salud.
+                </div>
             </div>
         </div>
-
-        <div class="catalog-section">
-            <div class="catalog-title">⚡ ELECTRICIDAD, ELECTRÓNICA Y OFICIOS (10+ Cursos)</div>
-            <div class="course-item"><span class="course-name">Electricidad Domiciliaria (4 meses)</span><span class="course-detail">C.F.P. N°1</span></div>
-            <div class="course-item"><span class="course-name">Instalador de Paneles Solares</span><span class="course-detail">Fundación Carlos Slim</span></div>
-            <div class="course-item"><span class="course-name">Congreso Energías Renovables</span><span class="course-detail">Asistente (2019)</span></div>
-            <div class="course-item"><span class="course-name">Seguridad e Higiene en Electricidad</span><span class="course-detail">UOMS Jujuy</span></div>
-            <div class="course-item"><span class="course-name">Electricidad Básica / Electricidad (3 meses)</span><span class="course-detail">UOMS / Min. Desarrollo Humano</span></div>
-            <div class="course-item"><span class="course-name">Electrónica / Electrónica Básica (4 meses)</span><span class="course-detail">Min. Desarrollo Humano / C.F.P. N°1</span></div>
-            <div class="course-item"><span class="course-name">Reparación de Celulares (3 meses)</span><span class="course-detail">Min. Desarrollo Humano</span></div>
-            <div class="course-item"><span class="course-name">Soldadura (4 meses)</span><span class="course-detail">UNJu (2022)</span></div>
-            <div class="course-item"><span class="course-name">Carpintería (4 meses + curso online)</span><span class="course-detail">C.F.P. N°1 / Fundación Carlos Slim</span></div>
-            <div class="course-item"><span class="course-name">Albañilería (4 meses)</span><span class="course-detail">C.F.P. N°1</span></div>
-        </div>
-
-        <div class="catalog-section">
-            <div class="catalog-title">🍳 GASTRONOMÍA Y GESTIÓN (6+ Cursos)</div>
-            <div class="course-item"><span class="course-name">Chef Profesional / Profesional Gastronómico</span><span class="course-detail">IGI - Más de 15 materias</span></div>
-            <div class="course-item"><span class="course-name">Manipulación de Alimentos</span><span class="course-detail">Municipalidad de S.S. de Jujuy</span></div>
-            <div class="course-item"><span class="course-name">Logística Básica (30h)</span><span class="course-detail">(2019)</span></div>
-        </div>
-
-        <div class="catalog-section">
-            <div class="catalog-title">📊 HERRAMIENTAS DE GESTIÓN & OFICINA (5+ Cursos)</div>
-            <div class="two-col-list">
-                <div class="course-item"><span class="course-name">Excel para Ingenieros</span><span class="course-detail">UNJu-FI (2022)</span></div>
-                <div class="course-item"><span class="course-name">Excel</span><span class="course-detail">A. Quispe (2019)</span></div>
-                <div class="course-item"><span class="course-name">Estadística General</span><span class="course-detail">UCSE-DASS</span></div>
-                <div class="course-item"><span class="course-name">Estadística Descriptiva (Nota: 8)</span><span class="course-detail">UCSE-DASS</span></div>
-                <div class="course-item"><span class="course-name">Inglés Básico para Negocios</span><span class="course-detail">EDEP (2022)</span></div>
+        
+        <!-- Formación académica -->
+        <div class="section">
+            <div class="section-title">FORMACIÓN ACADÉMICA</div>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Técnicatura Superior en Soporte de Infraestructura de TI</div>
+                        <div class="item-subtitle">Título obtenido</div>
+                    </div>
+                </div>
+                <div class="item-description">
+                    Especialización en redes, seguridad informática, bases de datos, sistemas operativos, administración de servidores y legislación informática.
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Analista Programador Universitario</div>
+                        <div class="item-subtitle">Carrera en curso (50% aprobado)</div>
+                    </div>
+                    <div class="item-date">En progreso</div>
+                </div>
+                <div class="item-description">
+                    Materias aprobadas: Álgebra I y II (Promocionada con 8 y 9), Análisis y Diseño de Sistemas I (8), Bases de Datos I y II, Programación Visual (9), Redes I y II (5, 9), Legislación (8).
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Licenciatura en Psicología Laboral</div>
+                        <div class="item-subtitle">Carrera en curso</div>
+                    </div>
+                </div>
+                <div class="item-description">
+                    Un tercio de la carrera aprobado. Conocimientos en dinámicas organizacionales y comportamiento en entornos laborales.
+                </div>
             </div>
         </div>
-
-        <div class="catalog-section">
-            <div class="catalog-title">🧠 SALUD, SOCIEDAD Y DESARROLLO PERSONAL (6+ Cursos)</div>
-            <div class="course-item"><span class="course-name">Reanimación Cardiopulmonar (RCP)</span><span class="course-detail">ART / UNJu-FI</span></div>
-            <div class="course-item"><span class="course-name">Perspectiva de Género en Medios</span><span class="course-detail">UNJu-FI (35h)</span></div>
-            <div class="course-item"><span class="course-name">Jornada de Salud Mental</span><span class="course-detail">UCSE-DASS (3 días)</span></div>
-            <div class="course-item"><span class="course-name">Seminario: Angustia</span><span class="course-detail">IOM (1 año)</span></div>
-            <div class="course-item"><span class="course-name">Técnicas de Estudio (18hs)</span><span class="course-detail">Prof. D. Moyano</span></div>
-            <div class="course-item"><span class="course-name">Jornada de Ingeniería Industrial</span><span class="course-detail">UNJu-FI</span></div>
+        
+        <!-- Habilidades técnicas -->
+        <div class="section">
+            <div class="section-title">HABILIDADES TÉCNICAS</div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="skill-category-title">Desarrollo y Programación</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Java</span>
+                        <span class="skill-tag highlight">React.js</span>
+                        <span class="skill-tag highlight">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Programación Full Stack</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Infraestructura TI y Sistemas</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Soporte Técnico</span>
+                        <span class="skill-tag">Redes Informáticas</span>
+                        <span class="skill-tag">Seguridad IT</span>
+                        <span class="skill-tag">Sistemas Operativos</span>
+                        <span class="skill-tag">Bases de Datos</span>
+                        <span class="skill-tag">Administración de Servidores</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Herramientas y Aplicaciones</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tango Gestión</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">LibreOffice</span>
+                        <span class="skill-tag">Automatización (n8n, Make)</span>
+                        <span class="skill-tag">Windows/Linux</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Habilidades Complementarias</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Atención al Cliente</span>
+                        <span class="skill-tag">Gestión de Datos</span>
+                        <span class="skill-tag">Organización</span>
+                        <span class="skill-tag">Resolución de Problemas</span>
+                        <span class="skill-tag">Adaptabilidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cursos destacados -->
+        <div class="section">
+            <div class="section-title">CERTIFICACIONES DESTACADAS</div>
+            <div class="courses-highlight">
+                <div class="course-item">
+                    <div class="course-name">React.js</div>
+                    <div class="course-detail">Digital House (2026)</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Full Stack Java</div>
+                    <div class="course-detail">Codo a Codo / Gobierno de CABA (2022)</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Programación Web Full Stack</div>
+                    <div class="course-detail">Digital House (2024)</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Tango Inicial (ERP)</div>
+                    <div class="course-detail">Axoft (2024)</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Python para Programación</div>
+                    <div class="course-detail">Universidad Austral (2022)</div>
+                </div>
+                <div class="course-item">
+                    <div class="course-name">Reparación y Mantenimiento de PC</div>
+                    <div class="course-detail">Academia 3E (2025)</div>
+                </div>
+                <div style="margin-top: 15px; font-size: 13px; color: #64748b;">
+                    <strong>Nota:</strong> Poseo más de 40 certificaciones adicionales en áreas como electricidad, electrónica, gestión, gastronomía y desarrollo personal, evidenciando una trayectoria de aprendizaje continuo y versatilidad profesional.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nota final -->
+        <div class="footer-note">
+            Disponibilidad inmediata • Referencias disponibles según solicitud
         </div>
     </div>
 </body>
