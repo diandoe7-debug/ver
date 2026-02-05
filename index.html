@@ -3,96 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; color: #333; line-height: 1.6; background-color: #f9f9f9; }
-        .cv-container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-radius: 5px; }
-        .header { border-bottom: 3px solid #2c5aa0; padding-bottom: 20px; margin-bottom: 30px; text-align: center; }
-        .name { font-size: 32px; font-weight: 700; color: #1a365d; margin-bottom: 5px; letter-spacing: -0.5px; }
-        .title { font-size: 18px; color: #2c5aa0; font-weight: 500; margin-bottom: 15px; }
-        .contact { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; font-size: 14px; color: #555; margin-top: 10px; }
-        .section { margin-bottom: 28px; }
-        .section-title { font-size: 18px; color: #1a365d; border-bottom: 2px solid #eaeaea; padding-bottom: 8px; margin-bottom: 15px; font-weight: 600; }
-        .highlight-box { background: #f0f7ff; border-left: 4px solid #2c5aa0; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
-        .two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .item { margin-bottom: 16px; }
-        .item-title { font-weight: 600; color: #2d3748; display: block; }
-        .item-detail { font-size: 14px; color: #4a5568; margin-top: 3px; }
-        .skill-tag { display: inline-block; background: #edf2f7; padding: 5px 12px; border-radius: 15px; font-size: 13px; margin: 0 6px 8px 0; color: #2d3748; }
-        .table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
-        .table th { background: #f7fafc; text-align: left; padding: 10px; border-bottom: 2px solid #e2e8f0; color: #1a5f7a; }
-        .table td { padding: 10px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
-        @media print { body { background: white; margin: 15px; } .cv-container { box-shadow: none; padding: 20px; } }
+        /* ESTILOS PAGINA 2 - CATÁLOGO */
+        body { font-family: 'Calibri', 'Segoe UI', sans-serif; margin: 0; padding: 20px; color: #333; line-height: 1.4; background-color: #f5f5f5;}
+        .page-container { max-width: 800px; margin: 0 auto; background: white; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .page-title { text-align: center; font-size: 20px; color: #1a5f7a; font-weight: bold; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid #1a5f7a; }
+        .catalog-section { margin-bottom: 25px; page-break-inside: avoid; }
+        .catalog-title { font-size: 16px; font-weight: bold; color: #2c5aa0; background-color: #e9f2ff; padding: 8px 12px; border-radius: 5px; margin-bottom: 12px; }
+        .course-item { margin-bottom: 8px; padding-left: 10px; font-size: 13px; }
+        .course-name { display: block; font-weight: 500; }
+        .course-detail { font-size: 12px; color: #666; }
+        .two-col-list { column-count: 2; column-gap: 30px; }
+        @media print { body { background: white; padding: 10px; } .page-container { box-shadow: none; padding: 15px; } }
     </style>
 </head>
 <body>
-    <div class="cv-container">
-        <div class="header">
-            <div class="name">ROXANA BENICIO</div>
-            <div class="title">Docente Técnica en Informática | Analista Programadora y Especialista en Infraestructura TI</div>
-            <div class="contact">📧 roxanayvbenicio@gmail.com | 📱 388 473-2680 | 📍 San Salvador de Jujuy</div>
-        </div>
+    <div class="page-container">
+        <div class="page-title">📚 CATÁLOGO DE FORMACIÓN CONTINUA Y CERTIFICACIONES</div>
+        <p style="text-align: center; font-size: 13.5px; color: #555; margin-bottom: 25px;">Más de 40 cursos que evidencian una dedicación excepcional al aprendizaje permanente y una versatilidad única.</p>
 
-        <div class="section">
-            <div class="section-title">PERFIL PROFESIONAL</div>
-            <p>Profesional con una sólida y única formación dual en <strong>desarrollo de software</strong> y <strong>soporte de infraestructura de tecnología de la información</strong>. Capacitada para la docencia técnica con un enfoque integral que combina teoría, práctica y una comprensión completa del ecosistema tecnológico. Con aptitud para dictar materias troncales de las carreras de informática, complementada con formación en psicología laboral que facilita la comprensión de dinámicas de aula y aprendizaje.</p>
-        </div>
-
-        <div class="section">
-            <div class="section-title">COMPETENCIA DOCENTE ESPECÍFICA</div>
-            <p>Formación académica directa para impartir las siguientes materias del plan de estudios de carreras de informática:</p>
-            <table class="table">
-                <tr><th>Materia que puedo dictar</th><th>Base formativa (Materia/Título aprobado)</th><th>Nota/Detalle</th></tr>
-                <tr><td><strong>Álgebra</strong></td><td>Analista Programador Universitario</td><td>Promocionada (9)</td></tr>
-                <tr><td><strong>Análisis y Diseño de Sistemas</strong></td><td>Analista Programador Universitario</td><td>Aprobada (8)</td></tr>
-                <tr><td><strong>Bases de Datos I y II</strong></td><td>Ambas carreras (APU y Tecnicatura)</td><td>Aprobadas</td></tr>
-                <tr><td><strong>Redes Informáticas</strong></td><td>Ambas carreras (Redes I, II y módulo Redes)</td><td>Aprobadas (5, 9)</td></tr>
-                <tr><td><strong>Programación I, II, III</strong></td><td>Programación Visual (APU) + Módulo de Programación</td><td>Promocionada (9)</td></tr>
-                <tr><td><strong>Seguridad Informática</strong></td><td>Tecnicatura Superior en Soporte de Infraestructura TI</td><td>Título Obtenido</td></tr>
-                <tr><td><strong>Legislación / Ética</strong></td><td>Ambas carreras (Legislación y Legislación Informática)</td><td>Promocionada (8)</td></tr>
-            </table>
-        </div>
-
-        <div class="two-columns">
-            <div>
-                <div class="section">
-                    <div class="section-title">FORMACIÓN ACADÉMICA</div>
-                    <div class="item">
-                        <span class="item-title">Técnica Superior en Soporte de Infraestructura de TI</span>
-                        <span class="item-detail">Título obtenido. Materias relevantes: Redes, Seguridad Informática, Bases de Datos, Sistemas Operativos, Administración de Servidores.</span>
-                    </div>
-                    <div class="item">
-                        <span class="item-title">Analista Programador Universitario</span>
-                        <span class="item-detail">Carrera en curso (50% aprobado). Materias clave aprobadas con notas destacadas: Álgebra (9), Análisis y Diseño (8), Bases de Datos, Redes (5,9), Programación Visual (9), Legislación (8).</span>
-                    </div>
-                    <div class="item">
-                        <span class="item-title">Licenciatura en Psicología Laboral</span>
-                        <span class="item-detail">Un tercio de la carrera aprobado. Conocimientos aplicables a dinámicas grupales, motivación y clima de aprendizaje.</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="section">
-                    <div class="section-title">HABILIDADES TÉCNICAS</div>
-                    <div>
-                        <span class="skill-tag">Java</span><span class="skill-tag">React.js</span><span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML/CSS</span><span class="skill-tag">SQL</span><span class="skill-tag">Bases de Datos</span><span class="skill-tag">Redes</span><span class="skill-tag">Soporte TI</span><span class="skill-tag">Sistemas Operativos</span><span class="skill-tag">Tango Gestión</span><span class="skill-tag">Automatización</span>
-                    </div>
-                </div>
-                <div class="section">
-                    <div class="section-title">CERTIFICACIONES DESTACADAS</div>
-                    <div class="item-detail">• Full Stack Java (Codo a Codo, 2022)<br>• React.js (Digital House, 2026)<br>• Programación Web Full Stack (Digital House, 2024)<br>• Python (Universidad Austral, 2022)<br>• Tango Inicial (Axoft, 2024)</div>
-                </div>
+        <div class="catalog-section">
+            <div class="catalog-title">💻 DESARROLLO DE SOFTWARE & PROGRAMACIÓN (10+ Cursos)</div>
+            <div class="two-col-list">
+                <div class="course-item"><span class="course-name">React.js</span><span class="course-detail">Digital House (2026)</span></div>
+                <div class="course-item"><span class="course-name">Full Stack Java</span><span class="course-detail">Codo a Codo / GCBA (2022)</span></div>
+                <div class="course-item"><span class="course-name">Programación Web Full Stack</span><span class="course-detail">Digital House (2024)</span></div>
+                <div class="course-item"><span class="course-name">Programación desde Cero</span><span class="course-detail">Egg Live (2023)</span></div>
+                <div class="course-item"><span class="course-name">Python (Introducción)</span><span class="course-detail">Universidad Austral (2022)</span></div>
+                <div class="course-item"><span class="course-name">Sé Programar (JS, Ruby)</span><span class="course-detail">Argentina Programa (2022)</span></div>
+                <div class="course-item"><span class="course-name">Introducción al Desarrollo Web</span><span class="course-detail">Uni. de los Andes (2020, 2021)</span></div>
+                <div class="course-item"><span class="course-name">Programador</span><span class="course-detail">Escuela Prof. N°8 (2025)</span></div>
+                <div class="course-item"><span class="course-name">Operador de Informática</span><span class="course-detail">Escuela Prof. N°8 (2024)</span></div>
             </div>
         </div>
 
-        <div class="section">
-            <div class="section-title">EXPERIENCIA LABORAL RELEVANTE</div>
-            <div class="item">
-                <span class="item-title">Soporte Técnico / Prácticas / Freelance</span>
-                <span class="item-detail">Soporte técnico a usuarios, mantenimiento de sistemas, gestión de datos, uso de herramientas informáticas y automatización de tareas. Desarrollo de habilidades de diagnóstico, resolución de problemas y comunicación técnica clara.</span>
+        <div class="catalog-section">
+            <div class="catalog-title">🔌 INFRAESTRUCTURA TI, REDES Y SISTEMAS (8+ Cursos)</div>
+            <div class="two-col-list">
+                <div class="course-item"><span class="course-name">Redes y Bases de Datos</span><span class="course-detail">Escuela de Minas (2020)</span></div>
+                <div class="course-item"><span class="course-name">Reparación y Mantenimiento de PC</span><span class="course-detail">Academia 3E (2025)</span></div>
+                <div class="course-item"><span class="course-name">Redes Informáticas</span><span class="course-detail">UNJu-Fa (2019)</span></div>
+                <div class="course-item"><span class="course-name">Redes y Reparación de PC</span><span class="course-detail">A. Quispe (2019)</span></div>
+                <div class="course-item"><span class="course-name">Operador de PC</span><span class="course-detail">Min. Desarrollo Humano (Jujuy)</span></div>
+                <div class="course-item"><span class="course-name">Tango Inicial (ERP)</span><span class="course-detail">Axoft (2024)</span></div>
+                <div class="course-item"><span class="course-name">Seminario de Informática</span><span class="course-detail">UCSE-DASS</span></div>
             </div>
         </div>
 
-        <div class="highlight-box">
-            <strong>✅ Valor Añadido para el Aula:</strong> Perfil único que integra el <strong>"cómo se construye"</strong> el software (Analista Programador) con el <strong>"dónde y cómo funciona"</strong> (Infraestructura TI). Formación continua probada con más de 20 cursos técnicos. Perspectiva psicosocial que contribuye a un mejor manejo del grupo de aprendizaje.
+        <div class="catalog-section">
+            <div class="catalog-title">⚡ ELECTRICIDAD, ELECTRÓNICA Y OFICIOS (10+ Cursos)</div>
+            <div class="course-item"><span class="course-name">Electricidad Domiciliaria (4 meses)</span><span class="course-detail">C.F.P. N°1</span></div>
+            <div class="course-item"><span class="course-name">Instalador de Paneles Solares</span><span class="course-detail">Fundación Carlos Slim</span></div>
+            <div class="course-item"><span class="course-name">Congreso Energías Renovables</span><span class="course-detail">Asistente (2019)</span></div>
+            <div class="course-item"><span class="course-name">Seguridad e Higiene en Electricidad</span><span class="course-detail">UOMS Jujuy</span></div>
+            <div class="course-item"><span class="course-name">Electricidad Básica / Electricidad (3 meses)</span><span class="course-detail">UOMS / Min. Desarrollo Humano</span></div>
+            <div class="course-item"><span class="course-name">Electrónica / Electrónica Básica (4 meses)</span><span class="course-detail">Min. Desarrollo Humano / C.F.P. N°1</span></div>
+            <div class="course-item"><span class="course-name">Reparación de Celulares (3 meses)</span><span class="course-detail">Min. Desarrollo Humano</span></div>
+            <div class="course-item"><span class="course-name">Soldadura (4 meses)</span><span class="course-detail">UNJu (2022)</span></div>
+            <div class="course-item"><span class="course-name">Carpintería (4 meses + curso online)</span><span class="course-detail">C.F.P. N°1 / Fundación Carlos Slim</span></div>
+            <div class="course-item"><span class="course-name">Albañilería (4 meses)</span><span class="course-detail">C.F.P. N°1</span></div>
+        </div>
+
+        <div class="catalog-section">
+            <div class="catalog-title">🍳 GASTRONOMÍA Y GESTIÓN (6+ Cursos)</div>
+            <div class="course-item"><span class="course-name">Chef Profesional / Profesional Gastronómico</span><span class="course-detail">IGI - Más de 15 materias</span></div>
+            <div class="course-item"><span class="course-name">Manipulación de Alimentos</span><span class="course-detail">Municipalidad de S.S. de Jujuy</span></div>
+            <div class="course-item"><span class="course-name">Logística Básica (30h)</span><span class="course-detail">(2019)</span></div>
+        </div>
+
+        <div class="catalog-section">
+            <div class="catalog-title">📊 HERRAMIENTAS DE GESTIÓN & OFICINA (5+ Cursos)</div>
+            <div class="two-col-list">
+                <div class="course-item"><span class="course-name">Excel para Ingenieros</span><span class="course-detail">UNJu-FI (2022)</span></div>
+                <div class="course-item"><span class="course-name">Excel</span><span class="course-detail">A. Quispe (2019)</span></div>
+                <div class="course-item"><span class="course-name">Estadística General</span><span class="course-detail">UCSE-DASS</span></div>
+                <div class="course-item"><span class="course-name">Estadística Descriptiva (Nota: 8)</span><span class="course-detail">UCSE-DASS</span></div>
+                <div class="course-item"><span class="course-name">Inglés Básico para Negocios</span><span class="course-detail">EDEP (2022)</span></div>
+            </div>
+        </div>
+
+        <div class="catalog-section">
+            <div class="catalog-title">🧠 SALUD, SOCIEDAD Y DESARROLLO PERSONAL (6+ Cursos)</div>
+            <div class="course-item"><span class="course-name">Reanimación Cardiopulmonar (RCP)</span><span class="course-detail">ART / UNJu-FI</span></div>
+            <div class="course-item"><span class="course-name">Perspectiva de Género en Medios</span><span class="course-detail">UNJu-FI (35h)</span></div>
+            <div class="course-item"><span class="course-name">Jornada de Salud Mental</span><span class="course-detail">UCSE-DASS (3 días)</span></div>
+            <div class="course-item"><span class="course-name">Seminario: Angustia</span><span class="course-detail">IOM (1 año)</span></div>
+            <div class="course-item"><span class="course-name">Técnicas de Estudio (18hs)</span><span class="course-detail">Prof. D. Moyano</span></div>
+            <div class="course-item"><span class="course-name">Jornada de Ingeniería Industrial</span><span class="course-detail">UNJu-FI</span></div>
         </div>
     </div>
 </body>
